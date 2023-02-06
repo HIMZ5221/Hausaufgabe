@@ -81,8 +81,8 @@ public class Hausaufgabe0130 {
 		
 		System.out.println("★★★두두두두둥장!!! ==");
 		for(int i = 1;i <=num2; i++) {
-			System.out.println(num1 + " X " + i + " = " + (num1*i));
-		}
+		System.out.println(num1 + " X " + i + " = " + (num1*i));
+		};
 		
 		
 		
@@ -91,38 +91,9 @@ public class Hausaufgabe0130 {
 //		System.out.println("===========================");
 //		System.out.println("★멍청한오팔얼음요정의 곱셈시간이야!★");
 //		System.out.println("숫자를 입력해!!");
-//		int N = sc.nextInt();
 //		
-//		
-//		int num9 = 9;
-//		
-//		for(int i = 1 ; i<=N ; i++) {
-//			for(int j = 1 ; j<=N ; j++) {
-//				int a = i * j ;
-//				int sum1 = i* j ;
-//				boolean bool = true;
-//				while (bool) {
-//					
-//					if(a%10 == 9) {
-//						a /= 10;
-//						sum1 = 9;
-//					}
-//				}
-//				while (b>0) {
-//					b /= 10;
-//					if(b%10 == 9) {
-//						sum1 = 9;
-//					}
-//				}
-//					
-//				System.out.print(i + " * " + j + " = " + sum1);
-//		
-//			}
-//			System.out.println();
-//		}
-//		
-//		
-////		while(a%10 != 9 ||)
+
+		
 		
 		
 		

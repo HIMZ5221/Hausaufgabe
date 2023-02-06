@@ -17,7 +17,7 @@ public class Human {
 	
 	//메소드
 	public void getInformation() {
-		System.out.println("NAME : " + name 
+		System.out.print("NAME : " + name 
 				+ " , HEIGHT : " + height 
 				+ " , WEIGHT : " + weight); 
 	}

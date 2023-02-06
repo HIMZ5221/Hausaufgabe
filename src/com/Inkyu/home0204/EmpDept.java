@@ -6,7 +6,11 @@ public class EmpDept extends Employee{
 	public String department;
 
 	
-	
+	public EmpDept(String name,int salary, String department) {
+		this.name = name;
+		this.salary = salary;
+		this.department = department;
+	}
 	
 	//생성자
 	

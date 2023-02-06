@@ -3,9 +3,16 @@ package com.Inkyu.home0204;
 public class ObesityInfo extends StandardWeightInfo {
 
 	//필드
+	public String name;
+	public int height; 
+	public int weight;
 	
 	//생성자
-	
+	public ObesityInfo(String name, int height, int weight) {
+		this.name = name;
+		this.height = height;
+		this.weight = weight;
+	}
 	//메소드
 	
 	@Override

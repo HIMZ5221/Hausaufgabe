@@ -4,11 +4,12 @@ public class People {
 
 	public static void main(String[] args) {
 
-		Human people1 = new StandardWeightInfo();
-		Human people2 = new ObesityInfo();
 		
-		people1.info("홍길동", 168, 45);
-		people2.info("박돌이", 168, 90);
+		Human people1 = new StandardWeightInfo("홍길동", 168, 45);
+		Human people2 = new ObesityInfo("박돌이", 168, 90);
+		
+		//people1.info("홍길동", 168, 45);
+		//people2.info("박돌이", 168, 90);
 		
 		people1.getInformation();
 		people2.getInformation();
