@@ -1,6 +1,7 @@
 package com.Inkyu.home0207;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Scanner;
 
 public class Example {
 
@@ -11,16 +12,28 @@ public class Example {
 //		          입력> lion
 //		          입력> rabbit
 //		          출력> 가장 짧은 단어는 lion이며, 길이는 4 입니다.
-		String animal[] = {"tiger","lion","rabbit"};
-		int compare = 0;
-		int main = 10;
-		for(int i=0;i<3;i++) {
-			if(animal[i].length()<main) {
-				compare = i;
-				main = animal[i].length();
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("입력1>");
+		String firstWord = sc.nextLine();
+		System.out.println("입력2>");
+		String secondeWord = sc.nextLine();
+		System.out.println("입력3>");
+		String thirdWord = sc.nextLine();
+		
+		String shortWord = firstWord + " : " + firstWord.length();
+		
+		if(firstWord.length() > secondeWord.length()) {
+			shortWord = secondeWord + " : "+ secondeWord.length();
+			if(secondeWord.length() > thirdWord.length()) {
+				shortWord = shortWord + " : " + thirdWord.length();
+			}
+		}else {
+			if(firstWord.length() > thirdWord.length()) {
+				shortWord = thirdWord + " : " + thirdWord.length();
 			}
 		}
-		System.out.println("가장 짧은 단어는 "+animal[compare]+"이며, 길이는 "+ animal[compare].length() +"입니다.");
+		System.out.println(shortWord);
 		
 
 //		// 2) 문자열 개수 세기
@@ -28,6 +41,24 @@ public class Example {
 //		예시) 
 //		-> 입력 : 1a2b3c4d 5e
 //		-> 출력 : 문자 :5개, 숫자:5개, 공백 : 1개
+		System.out.println("입력");
+		String str = sc.nextLine();
+		int space = 0;
+		int num = 0;
+		int cha = 0;
+		
+		for(int i = 0; i < str.length(); i++) {
+			char tempStr = str.charAt(i);
+			if(tempStr == ' ') {
+				space++;
+			}else if(tempStr >= '0' && tempStr <='9') {
+				num++;
+			}else if(tempStr >='a'&&tempStr <='z') {
+				cha++;
+			}
+		}
+		System.out.println("숫자 : "+num+ "개, 문자 : " + cha + "개, 공백 : " + space);
+		
 		String str1 = "1a2b3c4d 5e";
 		byte[] char1 = str1.getBytes("UTF-8");
 		System.out.println(char1);
@@ -48,9 +79,47 @@ public class Example {
 //		-> 입력 : 두번째 문자 : a
 //		-> 출력 : 두 문자간의 거리 : 3
 //
+		System.out.println("입력>");
+		String alpha = sc.nextLine();
+		
+		System.out.println("첫번째 문자>");
+		String firstWord2 = sc.nextLine();
+		System.out.println("두번째 문자>");
+		String secondeWord2 = sc.nextLine();
+		
+		int firstIndex = alpha.indexOf(firstWord2);
+		int secondeIndex = alpha.indexOf(secondeWord2);
+				
+		//각 문자의 위치를 찾은 다음 큰 수 - 작은 수
+		if(firstIndex < secondeIndex) {
+			System.out.println("두 문자간의 거리 : "+(secondeIndex - firstIndex-1));
+		}else if(firstIndex > secondeIndex) {
+			System.out.println("두 문자간의 거리 : "+ (firstIndex - secondeIndex-1));
+		}
+		
 //		//4) 중복문자 제거
 //		입력 : aaabbccceedddd
 //		출력 : abcd
+		
+		System.out.println("입력>");
+		String strList = sc.nextLine();
+		
+		//indexOf, charAt
+		//charAt(0)~chatAt(문자열,length()-1)
+		//charAt(0) -> a
+		//indexOf(a) -> a의 위치 -> index : 0
+		//indexOf(charAt(i)) == i 
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i<strList.length();i++) {
+			if(strList.indexOf(strList.charAt(i))==i) {
+				System.out.println(i);
+				sb.append(strList.charAt(i));
+			}
+		}
+		System.out.println(sb);
+		//aaabbccceedddd
+		
+		
 	}
 
 }
